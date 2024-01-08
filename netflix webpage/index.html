@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <a href="#"><img src="images/Netflix-Logo.png" alt="logo"></a>
+    </nav>
+    <div class="form-wrapper">
+        <h2 id="signInTitle">Sign In</h2>
+        <form onsubmit="return validateForm()">
+            <div class="form-control">
+                <input type="text" id="email" required>
+                <label id="emailLabel">Email or phone number</label>
+                <div id="emailWarning" class="warning-message"></div>
+            </div>
+            <div class="form-control">
+                <input type="password" id="password" required>
+                <label id="passwordLabel">Password</label>
+                <div id="passwordWarning" class="warning-message"></div>
+            </div>
+            <button type="submit" id="signInButton">Sign In</button>
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me" id="rememberMeLabel">Remember me</label>
+                </div>
+                <a href="#" id="helpLink">Need help?</a>
+            </div>
+        </form>
+        <p id="newToNetflix">New to Netflix? <a href="#" id="signUpLink">Sign up now</a></p>
+        <small id="recaptchaInfo">
+            This page is protected by Google reCAPTCHA to ensure you're not a bot.
+            <a href="#" id="learnMoreLink">Learn more.</a>
+        </small>
+    </div>
+    <div class="bottom-section">
+        <a href="#" id="faq">FAQ</a>
+        <a href="#" id="terms-of-use">Terms of Use</a>
+        <a href="#" id="help-center">Help Center</a>
+        <a href="#" id="privacy-policy">Privacy</a>
+        <a href="#" id="cookie-preference">Cookie Preferences</a>
+        <a href="#" id="corporate-information">Corporate Information</a>
+        <label for="languageSelect" id="selectLanguageLabel">Select Language:</label>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="te">Telugu</option>
+            <option value="hi">Hindi</option>
+        </select>
+    </div>
+</body>
+
+</html>
